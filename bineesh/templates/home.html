@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Bineesh Kalaripayattu Academy{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container py-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 fw-bold mb-4 text-white">
+                    <span class="text-danger">Kalaripayattu</span> - The Mother of All Martial Arts
+                </h1>
+                <p class="lead mb-5 text-light">A 3,000-year-old warrior tradition from Kerala combining combat, healing, and spiritual growth</p>
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="#enroll" class="btn btn-danger btn-lg px-4 py-3">
+                        <i class="fas fa-fist-raised me-2"></i> Begin Training
+                    </a>
+                    <a href="#history" class="btn btn-outline-danger btn-lg px-4 py-3">
+                        <i class="fas fa-history me-2"></i> Explore History
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kalaripayattu Details Section -->
+<section id="history" class="py-6 bg-dark text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <img src="{% static 'images/kalari-1.jpg' %}" alt="Kalari training" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/kalari-2.jpg' %}" alt="Weapons training" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/kalari-3.jpg' %}" alt="Marma points" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/kalari-4.jpg' %}" alt="Traditional massage" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <h2 class="display-5 mb-4 text-danger">The Complete Warrior Science</h2>
+                    
+                    <div class="mb-4">
+                        <h3 class="h4 text-danger"><i class="fas fa-map-marker-alt me-2"></i> Origin</h3>
+                        <p>Born in Kerala over 3,000 years ago, Kalaripayattu is considered the oldest martial art still in existence. The word "Kalari" refers to the training ground, traditionally a sunken pit resembling a sacred temple space.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="h4 text-danger"><i class="fas fa-fist-raised me-2"></i> Techniques</h3>
+                        <p>This comprehensive system includes:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Meipayattu:</strong> Body conditioning and animal posture sequences</li>
+                            <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>AngaThari:</strong> Weapons training (sword, shield, staff, urumi)</li>
+                            <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>VerumKai:</strong> Unarmed combat techniques</li>
+                            <li><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>MarmaChikitsa:</strong> Knowledge of 107 vital points</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="h4 text-danger"><i class="fas fa-hand-holding-medical me-2"></i> Healing Arts</h3>
+                        <p>Integral to Kalaripayattu is <strong>Uzhichil</strong> (traditional massage) and herbal medicine, making it a complete system of warrior rehabilitation and longevity.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="h4 text-danger"><i class="fas fa-globe-asia me-2"></i> Global Influence</h3>
+                        <p>Kalaripayattu has influenced martial arts across Asia and forms the foundation for Kerala's performing arts like Kathakali and Theyyam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Yoga Integration Section -->
+<section class="yoga-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+                <h2 class="display-5 mb-4 text-danger">Yoga: The Perfect Complement</h2>
+                <p>Our traditional yoga practice enhances Kalaripayattu training through:</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Asanas:</strong> For flexibility and strength</li>
+                    <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Pranayama:</strong> Breath control techniques</li>
+                    <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Dhyana:</strong> Meditation for mental focus</li>
+                    <li><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Marma Yoga:</strong> Specialized energy work</li>
+                </ul>
+                <a href="#yoga" class="btn btn-outline-danger mt-3">Discover Our Yoga Programs</a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <img src="{% static 'images/yoga-kalari.jpg' %}" alt="Yoga for martial artists" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-6 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <img src="{% static 'images/vandana.jpg' %}" alt="Yoga Teacher Vandana Maya" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="display-5 mb-4 text-danger">Yoga Teacher Vandana Maya</h2>
+                <p class="lead text-dark">Specialized Yoga Integration Program</p>
+                
+                <div class="mb-4">
+                    <p>Vandana Maya brings 15 years of traditional yoga teaching experience, specializing in the integration of yoga with Kalaripayattu practice. Her unique approach combines:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Asana Alignment:</strong> For injury prevention and enhanced flexibility</li>
+                        <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Pranayama Techniques:</strong> To improve combat endurance</li>
+                        <li class="mb-2"><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Meditation Practices:</strong> For mental focus and clarity</li>
+                        <li><i class="fas fa-circle text-danger me-2" style="font-size: 8px;"></i> <strong>Marma Point Yoga:</strong> Specialized energy work for martial artists</li>
+                    </ul>
+                </div>
+                
+                <div class="alert alert-danger">
+                    <h4 class="alert-heading">Yoga Integration Course</h4>
+                    <p>This 3-month program meets twice weekly and includes personalized instruction to complement your Kalaripayattu training.</p>
+                    <hr>
+                    <p class="mb-0">Next batch begins: June 15, 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call to Action -->
+<section class="py-6 bg-danger text-center text-white">
+    <div class="container">
+        <h2 class="display-4 mb-4">Begin Your Warrior's Journey Today</h2>
+        <p class="lead mb-5">Join our community to learn these ancient disciplines from master instructors</p>
+        <a href="{% url 'enroll' %}" class="btn btn-light btn-lg px-5 py-3">Enroll Now</a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85));
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-section::before {
+        content: "";
+        background-image: url('{% static "images/kalari1.png" %}');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* Yoga Section */
+    .yoga-section {
+        background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+        background-size: cover;
+        color: white;
+        padding: 5rem 0;
+        position: relative;
+    }
+    
+    .yoga-section::before {
+        content: "";
+        background-image: url('{% static "images/yoga-bg.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* Text Shadow for Readability */
+    .display-3, .display-4, .display-5 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    /* Button Styles */
+    .btn-danger {
+        background-color: #dc3545;
+        border: 2px solid #dc3545;
+        transition: all 0.3s;
+    }
+    
+    .btn-danger:hover {
+        background-color: transparent;
+        color: #dc3545;
+        transform: translateY(-3px);
+    }
+    
+    .btn-outline-danger {
+        border: 2px solid #dc3545;
+        color: #dc3545;
+    }
+    
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+    
+    /* Image Hover Effects */
+    .img-fluid {
+        transition: transform 0.3s;
+    }
+    
+    .img-fluid:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(220,53,69,0.3) !important;
+    }
+    
+    /* Section Spacing */
+    .py-6 {
+        padding: 5rem 0;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 60vh;
+            text-align: center;
+        }
+        
+        .display-3 {
+            font-size: 2.5rem;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+       
+    }
+</style>
+{% endblock %}

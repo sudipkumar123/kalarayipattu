@@ -1,0 +1,80 @@
+{% load static %}
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-bottom border-danger pb-2 mb-3" style="width: fit-content;">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        Ariyallur,Malappuram, Kerala
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-phone text-danger me-2"></i>
+                        +91 9747029653
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-envelope text-danger me-2"></i>
+                        chekavaknowing@gmail.com
+                    </li>
+                </ul>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@bineeshgouri?si=LDw0SKPTsSxDEXmI" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-bottom border-danger pb-2 mb-3" style="width: fit-content;">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="{% url 'about' %}" class="text-white text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Class Schedule</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Instructors</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <!-- Class Times Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-bottom border-danger pb-2 mb-3" style="width: fit-content;">Class Times</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><span class="text-danger">Mon-Fri:</span> 5-8 PM</li>
+                    <li class="mb-2"><span class="text-danger">Saturday:</span> 9 AM-12 PM</li>
+                    <li class="mb-2"><span class="text-danger">Sunday:</span> Closed</li>
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-bottom border-danger pb-2 mb-3" style="width: fit-content;">Newsletter</h5>
+                <p>Subscribe for updates on classes and events</p>
+                <form class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <button class="btn btn-danger" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <hr class="my-4 bg-secondary">
+        
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2023 Bineesh Karate Classes. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa fa-lg me-2"></i>
+                    <i class="fab fa-cc-mastercard fa-lg me-2"></i>
+                    <i class="fab fa-cc-paypal fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

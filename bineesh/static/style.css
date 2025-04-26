@@ -1,0 +1,43 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+/* Header styles */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Hero section */
+.hero-section {
+    background: url('../images/hero-bg.jpg') center/cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* About page specific */
+.about-hero {
+    background: url('../images/about-bg.jpg') center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+  .modal-content {
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.3);
+  }
+
+  #freeTrialForm .form-control:focus,
+  #freeTrialForm .form-select:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  }
+
+  .modal-header {
+    border-bottom: 2px solid #fff;
+  }
+

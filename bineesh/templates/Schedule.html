@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Class Schedule - Bineesh Kalaripayattu Academy{% endblock %}
+
+{% block content %}
+
+<!-- Schedule Hero -->
+<section class="schedule-hero">
+  <div class="container py-5 text-center text-white">
+    <h1 class="display-4 fw-bold mb-3">Training Schedule</h1>
+    <p class="lead">Traditional Kalaripayattu & Yoga Classes</p>
+  </div>
+</section>
+
+<!-- Schedule Tabs -->
+<section class="py-5">
+  <div class="container">
+    <ul class="nav nav-tabs justify-content-center mb-4" id="scheduleTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="weekdays-tab" data-bs-toggle="tab" data-bs-target="#weekdays" type="button">
+          Weekdays
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="weekends-tab" data-bs-toggle="tab" data-bs-target="#weekends" type="button">
+          Weekends
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="intensive-tab" data-bs-toggle="tab" data-bs-target="#intensive" type="button">
+          Intensive Courses
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="scheduleTabsContent">
+      <!-- Weekdays Schedule -->
+      <div class="tab-pane fade show active" id="weekdays" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Wednesday</th>
+                <th>Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>6:00 - 7:30 AM</td>
+                <td>Beginner Kalari (Adults)</td>
+                <td>Weapons Training</td>
+                <td>Advanced Kalari</td>
+              </tr>
+              <tr>
+                <td>4:00 - 5:30 PM</td>
+                <td>Kids Class (5-12 yrs)</td>
+                <td>Teens Class</td>
+                <td>Kids Class (5-12 yrs)</td>
+              </tr>
+              <tr>
+                <td>6:00 - 7:30 PM</td>
+                <td>Yoga for Kalari</td>
+                <td>Marma Therapy</td>
+                <td>Open Training</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Weekends Schedule -->
+      <div class="tab-pane fade" id="weekends" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Time</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>7:00 - 8:30 AM</td>
+                <td>Family Class</td>
+                <td>Open Training</td>
+              </tr>
+              <tr>
+                <td>9:00 - 11:00 AM</td>
+                <td>Weapons Workshop</td>
+                <td>Yoga & Meditation</td>
+              </tr>
+              <tr>
+                <td>4:00 - 6:00 PM</td>
+                <td>Private Lessons</td>
+                <td>Healing Sessions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Intensive Courses -->
+      <div class="tab-pane fade" id="intensive" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-danger">
+              <div class="card-body">
+                <h3 class="h5 text-danger">7-Day Beginner</h3>
+                <p><i class="fas fa-calendar-day text-danger me-2"></i> First week every month</p>
+                <p><i class="fas fa-clock text-danger me-2"></i> 6:00-8:00 AM Daily</p>
+                <p><i class="fas fa-rupee-sign text-danger me-2"></i> ₹3,500</p>
+                <ul class="ps-3">
+                  <li>Basic postures</li>
+                  <li>Introduction to weapons</li>
+                  <li>Flexibility training</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-danger">
+              <div class="card-body">
+                <h3 class="h5 text-danger">21-Day Advanced</h3>
+                <p><i class="fas fa-calendar-day text-danger me-2"></i> Monthly 1-21</p>
+                <p><i class="fas fa-clock text-danger me-2"></i> 5:30-8:00 AM Daily</p>
+                <p><i class="fas fa-rupee-sign text-danger me-2"></i> ₹12,000</p>
+                <ul class="ps-3">
+                  <li>Urumi training</li>
+                  <li>Combat sequences</li>
+                  <li>Marma point study</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-danger">
+              <div class="card-body">
+                <h3 class="h5 text-danger">Weekend Warrior</h3>
+                <p><i class="fas fa-calendar-day text-danger me-2"></i> Every Saturday</p>
+                <p><i class="fas fa-clock text-danger me-2"></i> 7:00-11:00 AM</p>
+                <p><i class="fas fa-rupee-sign text-danger me-2"></i> ₹1,500/week</p>
+                <ul class="ps-3">
+                  <li>Condensed training</li>
+                  <li>Weapons focus</li>
+                  <li>Massage included</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Registration CTA -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="display-5 mb-4">Ready to Begin?</h2>
+    <p class="lead mb-4">First trial class is always free</p>
+    <a href="#" class="btn btn-danger btn-lg px-4 me-2">Book Now</a>
+    <a href="tel:+919747029653" class="btn btn-outline-dark btn-lg px-4">
+      <i class="fas fa-phone me-2"></i> Call: 9747029653
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .schedule-hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('{% static "images/schedule-bg.jpg" %}');
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #dc3545;
+    border-bottom: 3px solid #dc3545;
+  }
+  
+  .table th {
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .table-responsive {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Initialize tab functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabElms = document.querySelectorAll('button[data-bs-toggle="tab"]');
+    tabElms.forEach(tabEl => {
+      tabEl.addEventListener('click', function (e) {
+        e.preventDefault();
+        const tab = new bootstrap.Tab(this);
+        tab.show();
+      });
+    });
+  });
+</script>
+{% endblock %}

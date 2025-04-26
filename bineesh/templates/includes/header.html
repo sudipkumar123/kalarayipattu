@@ -1,0 +1,47 @@
+{% load static %}
+
+<!-- Navigation Bar -->
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Bineesh Karate Classes" height="50" class="d-inline-block align-top me-2">
+                <span class="d-none d-md-inline">BINEESH KARATE</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="active"><a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="classesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Classes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="classesDropdown">
+                            <li><a class="dropdown-item" href="#">Kids Classes</a></li>
+                            <li><a class="dropdown-item" href="#">Adult Classes</a></li>
+                            <li><a class="dropdown-item" href="#">Private Lessons</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/Schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'Instructors' %}">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'enroll' %}">Enroll</a></li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="tel:+919747029653" class="btn btn-outline-light me-2 d-none d-lg-block">
+                        <i class="fas fa-phone me-1"></i> 9747029653
+                    </a>
+                    <a href="{% url 'freeTrialModal' %}" class="btn btn-danger">
+                        <i class="fas fa-user-plus me-1"></i> Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Free Trial Modal -->  
+</header>

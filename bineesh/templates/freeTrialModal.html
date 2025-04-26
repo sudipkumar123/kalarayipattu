@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section>
+  <!-- Trigger Button for Modal (Optional: You can trigger this with a button elsewhere) -->
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#freeTrialModal">Open Modal</button> -->
+
+  <!-- Free Trial Modal -->
+  <div class="modal fade" id="freeTrialModal" tabindex="-1" aria-labelledby="freeTrialModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="card shadow">
+          <div class="card-header bg-danger text-white">
+            <h5><i class="fas fa-user-plus me-2"></i> Free Trial Registration</h5>
+          </div>
+          <div class="card-body">
+            <!-- Form Begins -->
+            <form method="post" action="{% url 'freeTrialModal' %}">
+              {% csrf_token %}
+              <div class="modal-body">
+                <!-- Name -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name*</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email*</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-3">
+                  <label for="phone" class="form-label">WhatsApp Number*</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+
+                <!-- Experience -->
+                <div class="mb-3">
+                  <label for="experience" class="form-label">Martial Arts Experience</label>
+                  <select class="form-select" id="experience" name="experience">
+                    <option value="none">None (Beginner)</option>
+                    <option value="some">Some experience</option>
+                    <option value="intermediate">1–3 years training</option>
+                    <option value="advanced">3+ years training</option>
+                  </select>
+                </div>
+
+                <!-- Preferred Class Types -->
+                <div class="mb-3">
+                  <label class="form-label">Preferred Class Type</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="kalari" name="class_type[]" value="kalari" checked>
+                    <label class="form-check-label" for="kalari">Kalaripayattu</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="yoga" name="class_type[]" value="yoga">
+                    <label class="form-check-label" for="yoga">Yoga</label>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Any health concerns we should know about?</label>
+                  <textarea class="form-control" id="message" name="message" rows="2"></textarea>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger">
+                  <i class="fas fa-paper-plane me-1"></i> Submit Request
+                </button>
+              </div>
+            </form>
+            <!-- Form Ends -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if messages %}
+    <div class="container mt-3">
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</section>
+
+<!-- Script to handle modal behavior -->
+{% if open_modal and not form_submitted %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var trialModal = new bootstrap.Modal(document.getElementById('freeTrialModal'));
+    trialModal.show();
+  });
+</script>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,450 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Enroll Now - Bineesh Kalaripayattu Academy{% endblock %}
+
+{% block content %}
+
+<!-- Enrollment Hero Section -->
+<section class="enroll-hero-section">
+    <div class="container py-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 fw-bold mb-4 text-white">
+                    Begin Your <span class="text-primary">Warrior's Journey</span>
+                </h1>
+                <p class="lead mb-5 text-light">Join our ancient martial arts tradition and transform your body, mind, and spirit</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enrollment Form Section -->
+<section class="py-6 bg-primary bg-gradient">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-white">
+                        <h2 class="h3 mb-0 text-dark">Enrollment Application</h2>
+                    </div>
+                    <div class="card-body p-4 bg-light">
+                        {% if form_submitted %}
+                            <!-- Success Message Section -->
+                            <div class="text-center py-5">
+                                <div class="mb-4">
+                                    <i class="fas fa-check-circle text-success" style="font-size: 5rem;"></i>
+                                </div>
+                                <h3 class="text-success mb-3">Enrollment Submitted Successfully!</h3>
+                                <p class="lead">Thank you for your enrollment submission.</p>
+                                <p>We've sent a confirmation email to your registered email address.</p>
+                                <p>Our team will contact you shortly to complete the enrollment process.</p>
+                                <a href="{% url 'home' %}" class="btn btn-primary mt-4">
+                                    <i class="fas fa-home me-2"></i> Return to Home
+                                </a>
+                            </div>
+                        {% else %}
+                            <!-- Form Section -->
+                            <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                                {% csrf_token %}
+                                
+                                <!-- Personal Information Section -->
+                                <h3 class="h4 text-primary mb-4">Personal Information</h3>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label text-dark">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="first_name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your first name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label text-dark">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="last_name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your last name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label text-dark">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label text-dark">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a phone number.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="dob" class="form-label text-dark">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" name="dob" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your date of birth.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label text-dark">Gender</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                            <option value="">Choose...</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                            <option>Prefer not to say</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select your gender.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Program Selection Section -->
+                                <h3 class="h4 text-primary mb-4">Program Selection</h3>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="program" class="form-label text-dark">Program Type</label>
+                                        <select class="form-select" id="program" name="program" required>
+                                            <option value="">Choose a program...</option>
+                                            <option>Beginner Kalaripayattu (3 months)</option>
+                                            <option>Intermediate Training (6 months)</option>
+                                            <option>Advanced Warrior Program (1 year)</option>
+                                            <option>Yoga Integration Course (Vandana Maya)</option>
+                                            <option>Marma Therapy Training</option>
+                                            <option>Private Lessons</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a program.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="schedule" class="form-label text-dark">Preferred Schedule</label>
+                                        <select class="form-select" id="schedule" name="schedule" required>
+                                            <option value="">Choose a schedule...</option>
+                                            <option>Morning (6-8 AM)</option>
+                                            <option>Afternoon (4-6 PM)</option>
+                                            <option>Evening (6-8 PM)</option>
+                                            <option>Weekend Intensive</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a schedule.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="experience" class="form-label text-dark">Previous Martial Arts/Yoga Experience</label>
+                                        <textarea class="form-control" id="experience" name="experience" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Yoga Teacher Vandana Maya Section -->
+                                <div id="yogaTeacherSection" class="mb-4" style="display:none;">
+                                    <h3 class="h4 text-primary mb-4">Yoga Teacher Vandana Maya Program Details</h3>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="yogaExperience" class="form-label text-dark">Years of Yoga Practice</label>
+                                            <input type="number" class="form-control" id="yogaExperience" name="yoga_experience" min="0">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="yogaCertification" class="form-label text-dark">Yoga Certification (if any)</label>
+                                            <input type="text" class="form-control" id="yogaCertification" name="yoga_certification">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="teachYoga" name="teach_yoga">
+                                                <label class="form-check-label text-dark" for="teachYoga">
+                                                    I'm interested in teaching yoga at the academy
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Health Information Section -->
+                                <h3 class="h4 text-primary mb-4">Health Information</h3>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="healthIssues" name="health_issues">
+                                            <label class="form-check-label text-dark" for="healthIssues">
+                                                I have any pre-existing health conditions or injuries
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="healthDetails" class="form-label text-dark">Health Details (if any)</label>
+                                        <textarea class="form-control" id="healthDetails" name="health_details" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Payment Section -->
+                                <h3 class="h4 text-primary mb-4">Payment Information</h3>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <div class="card border-primary mb-3">
+                                            <div class="card-header bg-primary text-white">
+                                                Payment Instructions
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    <strong>Course Fee:</strong> ₹5,000 (for first month)<br>
+                                                    <strong>Account Name:</strong> Bineesh Kalaripayattu Academy<br>
+                                                    <strong>Bank:</strong> State Bank of India<br>
+                                                    <strong>Account No:</strong> 123456789012<br>
+                                                    <strong>IFSC:</strong> SBIN0001234
+                                                </p>
+                                                <div class="text-center mb-3">
+                                                    <img src="{% static 'images/qr.png' %}" alt="Payment QR Code" class="img-fluid" style="max-width: 300px;">
+                                                    <p class="small mt-2">Scan to pay via UPI</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="paymentAmount" class="form-label text-dark">Amount Paid (₹)</label>
+                                            <input type="number" class="form-control" id="paymentAmount" name="payment_amount" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="transactionId" class="form-label text-dark">Transaction ID/Reference No</label>
+                                            <input type="text" class="form-control" id="transactionId" name="transaction_id" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="paymentReceipt" class="form-label text-dark">Upload Payment Receipt</label>
+                                            <input type="file" class="form-control" id="paymentReceipt" name="payment_receipt" accept="image/*,.pdf" required>
+                                            <div class="form-text">Upload clear photo or scan of your payment receipt (JPG, PNG or PDF)</div>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="paymentConfirmed" name="payment_confirmed" required>
+                                            <label class="form-check-label text-dark" for="paymentConfirmed">
+                                                I confirm that I have made the payment as instructed
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                You must confirm your payment.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Terms and Conditions -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                    <label class="form-check-label text-dark" for="terms">
+                                        I agree to the academy's <a href="#" class="text-primary">terms and conditions</a>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-primary btn-lg w-100 py-3" type="submit">
+                                    <i class="fas fa-paper-plane me-2"></i> Submit Application
+                                </button>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-6 bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 mb-4 text-primary">Why Train With Us?</h2>
+                <p class="lead text-dark">Authentic Kalaripayattu training passed down through generations of masters</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-light shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 text-primary">
+                            <i class="fas fa-user-ninja fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-dark">Master Instructors</h3>
+                        <p class="text-muted">Learn from certified Gurukkals with 20+ years of experience in traditional Kalaripayattu.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-light shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 text-primary">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-dark">Complete System</h3>
+                        <p class="text-muted">Comprehensive training in combat, weapons, healing arts, and spiritual development.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-light shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 text-primary">
+                            <i class="fas fa-heartbeat fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-dark">Holistic Approach</h3>
+                        <p class="text-muted">Integration of yoga, meditation, and Ayurveda for complete warrior development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-6 bg-primary bg-gradient text-center text-white">
+    <div class="container">
+        <h2 class="display-4 mb-4">Ready to Begin Your Transformation?</h2>
+        <p class="lead mb-5">Limited spaces available for our next training batch</p>
+        <a href="#top" class="btn btn-light btn-lg px-5 py-3">
+            <i class="fas fa-arrow-up me-2"></i> Return to Enrollment Form
+        </a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Enrollment Hero Section */
+    .enroll-hero-section {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .enroll-hero-section::before {
+        content: "";
+        background-image: url('{% static "images/kalari-training.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* Form Section */
+    .bg-primary.bg-gradient {
+        background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%) !important;
+    }
+    
+    /* Card Styles */
+    .card {
+        transition: transform 0.3s;
+        border-radius: 0.5rem;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Form Elements */
+    .form-control, .form-select {
+        background-color: white !important;
+        color: #212529 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+    
+    .form-control:focus, .form-select:focus {
+        border-color: #86b7fe !important;
+        box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25) !important;
+    }
+    
+    /* Payment Card */
+    .card-border-primary {
+        border-color: #0d6efd !important;
+    }
+    
+    /* Testimonial Images */
+    .rounded-circle {
+        object-fit: cover;
+    }
+    
+    /* Button Styles */
+    .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        transform: translateY(-2px);
+    }
+    
+    /* Section Spacing */
+    .py-6 {
+        padding: 5rem 0;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .enroll-hero-section {
+            min-height: 40vh;
+        }
+        
+        .display-3 {
+            font-size: 2.5rem;
+        }
+        
+        .display-4 {
+            font-size: 2.2rem;
+        }
+        
+        .display-5 {
+            font-size: 2rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Form validation
+    (function () {
+        'use strict'
+        
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+    
+    // Show/hide yoga teacher section based on program selection
+    document.getElementById('program').addEventListener('change', function() {
+        var yogaSection = document.getElementById('yogaTeacherSection');
+        if (this.value === 'Yoga Integration Course (Vandana Maya)') {
+            yogaSection.style.display = 'block';
+        } else {
+            yogaSection.style.display = 'none';
+        }
+    });
+</script>
+{% endblock %}

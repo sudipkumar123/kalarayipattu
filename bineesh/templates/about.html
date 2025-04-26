@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Bineesh Kalaripayattu Academy{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="container py-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center text-white">
+                <h1 class="display-3 fw-bold mb-4">
+                    Preserving the Ancient Warrior Tradition
+                </h1>
+                <p class="lead">Since 2005 | Kerala, India</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Legacy Section -->
+<section class="py-6 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <img src="{% static 'images/kalari-legacy.jpg' %}" alt="Traditional Kalari" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-5 mb-4 text-danger">Our Legacy</h2>
+                <p>Founded in Kerala, the birthplace of Kalaripayattu, our academy is dedicated to reviving and teaching the world's oldest martial art in its purest form.</p>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-fist-raised text-danger me-3 fs-4"></i>
+                            <div>
+                                <h5 class="fw-bold">Combat</h5>
+                                <p>Meipayattu, AngaThari, VerumKai</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-hand-holding-medical text-danger me-3 fs-4"></i>
+                            <div>
+                                <h5 class="fw-bold">Healing</h5>
+                                <p>Marma Chikitsa, Uzhichil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-leaf text-danger me-3 fs-4"></i>
+                            <div>
+                                <h5 class="fw-bold">Spiritual</h5>
+                                <p>Yoga, Meditation, Energy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-users text-danger me-3 fs-4"></i>
+                            <div>
+                                <h5 class="fw-bold">Community</h5>
+                                <p>500+ Trained Warriors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gurukkal Section -->
+<section class="py-6 bg-dark text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <img src="{% static 'images/gurukkal.jpg' %}" alt="Gurukkal Bineesh" class="img-fluid rounded-circle shadow-lg" style="width: 400px; height: 400px; object-fit: cover;">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="display-5 mb-4 text-danger">Gurukkal Bineesh</h2>
+                <p class="fst-italic mb-4">"Kalaripayattu isn't just fighting—it's about mastering your body, healing others, and connecting with ancestral wisdom."</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="bg-black p-3 rounded h-100">
+                            <h5 class="text-danger"><i class="fas fa-award me-2"></i> Lineage</h5>
+                            <p>Trained under Gurukkal [Name] of [Kalari Name] for 12 years</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-black p-3 rounded h-100">
+                            <h5 class="text-danger"><i class="fas fa-globe-asia me-2"></i> Recognition</h5>
+                            <p>Featured in [Media/Events] with international workshops</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-black p-3 rounded h-100">
+                            <h5 class="text-danger"><i class="fas fa-certificate me-2"></i> Certifications</h5>
+                            <p>Marma Therapy, Ayurveda, Yoga Instructor</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-black p-3 rounded h-100">
+                            <h5 class="text-danger"><i class="fas fa-user-graduate me-2"></i> Students</h5>
+                            <p>Trained 50+ instructors worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Methodology Section -->
+<section class="py-6">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5">Our Unique Methodology</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-danger">
+                    <div class="card-body text-center">
+                        <i class="fas fa-fist-raised text-danger fs-1 mb-3"></i>
+                        <h3 class="h4">Physical Mastery</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Animal posture sequences</li>
+                            <li class="mb-2">• Weapons training</li>
+                            <li>• Combat techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-danger">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hand-holding-medical text-danger fs-1 mb-3"></i>
+                        <h3 class="h4">Healing Sciences</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Marma point therapy</li>
+                            <li class="mb-2">• Uzhichil massage</li>
+                            <li>• Herbal medicine</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-danger">
+                    <div class="card-body text-center">
+                        <i class="fas fa-leaf text-danger fs-1 mb-3"></i>
+                        <h3 class="h4">Spiritual Growth</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Kerala-style yoga</li>
+                            <li class="mb-2">• Meditation techniques</li>
+                            <li>• Energy work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-6 bg-light">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5">Student Transformations</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="{% static 'images/student1.jpg' %}" class="rounded-circle me-3" width="60" height="60" alt="Student">
+                            <div>
+                                <h5 class="mb-0">Rajesh K.</h5>
+                                <small class="text-muted">Age 32 | 2 Years Training</small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"After 6 months, my chronic back pain vanished! The combination of combat and massage therapy healed me."</p>
+                        <div class="text-danger">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="{% static 'images/student2.jpg' %}" class="rounded-circle me-3" width="60" height="60" alt="Student">
+                            <div>
+                                <h5 class="mb-0">Priya M.</h5>
+                                <small class="text-muted">NRI from Canada | 1 Year</small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"Training here connected me to my Kerala roots while getting me fitter than any gym."</p>
+                        <div class="text-danger">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-6 bg-danger text-white text-center">
+    <div class="container">
+        <h2 class="display-4 mb-4">Begin Your Warrior's Journey</h2>
+        <p class="lead mb-5">Join our kalari family and transform your body, mind and spirit</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-light btn-lg px-4">Free Trial Class</a>
+            <a href="#" class="btn btn-outline-light btn-lg px-4">Meet Our Team</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Hero Section */
+    .about-hero {
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                    url('{% static "images/about-bg.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Card Hover Effects */
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Section Spacing */
+    .py-6 {
+        padding: 5rem 0;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .about-hero {
+            min-height: 50vh;
+        }
+        .display-5, .display-4 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+{% endblock %}

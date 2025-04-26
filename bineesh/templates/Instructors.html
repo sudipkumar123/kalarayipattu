@@ -1,0 +1,455 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Master Instructors - Kalaripayattu & Yoga{% endblock %}
+
+{% block content %}
+
+<!-- Parallax Hero -->
+<section class="instructor-hero d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="display-3 fw-bold text-white mb-4">Meet Our Spiritual Warriors</h1>
+        <p class="lead text-light mb-5">Learn from authentic lineage holders with decades of experience</p>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="#kalaripayattu" class="btn btn-danger btn-lg px-4 py-3">
+            <i class="fas fa-fist-raised me-2"></i> Kalaripayattu Guru
+          </a>
+          <a href="#yoga" class="btn btn-light btn-lg px-4 py-3">
+            <i class="fas fa-spa me-2"></i> Yoga Master
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Navigation -->
+<div class="floating-nav">
+  <a href="#kalaripayattu" class="nav-item active">
+    <i class="fas fa-fist-raised"></i>
+    <span>Kalaripayattu</span>
+  </a>
+  <a href="#yoga" class="nav-item">
+    <i class="fas fa-spa"></i>
+    <span>Yoga</span>
+  </a>
+  <a href="#testimonials" class="nav-item">
+    <i class="fas fa-quote-right"></i>
+    <span>Testimonials</span>
+  </a>
+</div>
+
+<!-- Kalaripayattu Instructor -->
+<section id="kalaripayattu" class="py-6 position-relative">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="instructor-card kalari-card">
+          <div class="main-image">
+            <img src="{% static 'images/bineesh-action.jpg' %}" alt="Bineesh Gouri in Kalari pose" class="img-fluid">
+          </div>
+          <div class="badges">
+            <span class="badge bg-danger">25+ Years Experience</span>
+            <span class="badge bg-dark">Lineage Holder</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ps-lg-5">
+          <h2 class="display-4 mb-3 text-gradient kalari-gradient">Gurukkal Bineesh Gouri</h2>
+          <p class="text-muted mb-4"><i class="fas fa-map-marker-alt text-danger me-2"></i> Vadakkan Kalari Tradition, Kerala</p>
+          
+          <div class="mb-5">
+            <p class="lead">Master of the ancient warrior science combining combat, healing, and spiritual discipline.</p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Combat</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-heartbeat"></i>
+                <span>Healing</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-medal"></i>
+                <span>Weapons</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-leaf"></i>
+                <span>Energy</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#" class="btn btn-danger">
+              <i class="fas fa-calendar-check me-2"></i> Book Session
+            </a>
+            <a href="#" class="btn btn-outline-dark">
+              <i class="fab fa-youtube me-2"></i> Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Yoga Instructor -->
+<section id="yoga" class="py-6 bg-light position-relative">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="instructor-card yoga-card">
+          <div class="main-image">
+            <img src="{% static 'images/vandana-meditation.jpg' %}" alt="Vandana Maya in meditation" class="img-fluid">
+          </div>
+          <div class="badges">
+            <span class="badge bg-purple">18+ Years Experience</span>
+            <span class="badge bg-dark">Himalayan Tradition</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="pe-lg-5">
+          <h2 class="display-4 mb-3 text-gradient yoga-gradient">Yogini Vandana Maya</h2>
+          <p class="text-muted mb-4"><i class="fas fa-map-marker-alt text-purple me-2"></i> Himalayan Yoga Tradition</p>
+          
+          <div class="mb-5">
+            <p class="lead">Spiritual guide specializing in tantric yoga, energy healing, and meditation.</p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fas fa-yin-yang"></i>
+                <span>Hatha Yoga</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-brain"></i>
+                <span>Meditation</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-wind"></i>
+                <span>Pranayama</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Healing</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#" class="btn btn-purple">
+              <i class="fas fa-om me-2"></i> Join Retreat
+            </a>
+            <a href="#" class="btn btn-outline-dark">
+              <i class="fas fa-book-open me-2"></i> Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Carousel -->
+<section id="testimonials" class="py-6 bg-dark text-white">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">Student Transformations</h2>
+    
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-item text-center">
+            <img src="{% static 'images/student1.jpg' %}" class="rounded-circle mb-4" width="100" alt="Student">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="lead mb-4">"Gurukkal Bineesh's marma therapy healed my chronic back pain. His combat training transformed my physique."</p>
+            <h5>Arjun Menon</h5>
+            <small class="text-muted">Kalaripayattu Student, 3 years</small>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-item text-center">
+            <img src="{% static 'images/student2.jpg' %}" class="rounded-circle mb-4" width="100" alt="Student">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="lead mb-4">"Yogini Vandana's meditation techniques brought peace to my chaotic mind. Her energy healing sessions are transformative."</p>
+            <h5>Priya Nair</h5>
+            <small class="text-muted">Yoga Student, 2 years</small>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-6 cta-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="display-4 mb-4">Begin Your Transformation</h2>
+        <p class="lead mb-5">Join our community of warriors and seekers</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#" class="btn btn-danger btn-lg px-5 py-3">
+            <i class="fas fa-user-plus me-2"></i> Free Trial Class
+          </a>
+          <a href="#" class="btn btn-outline-light btn-lg px-5 py-3">
+            <i class="fas fa-phone me-2"></i> Call: +91 9747029653
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  :root {
+    --purple: #6f42c1;
+    --kalari-red: #dc3545;
+  }
+  
+  /* Hero Section */
+  .instructor-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('{% static "images/instructor-bg-alt.jpg" %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 80vh;
+  }
+  
+  /* Floating Navigation */
+  .floating-nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .floating-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+  }
+  
+  .floating-nav .nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .floating-nav .nav-item.active {
+    color: var(--kalari-red);
+  }
+  
+  /* Instructor Cards */
+  .instructor-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .instructor-card .main-image {
+    transition: transform 0.5s;
+  }
+  
+  .instructor-card:hover .main-image {
+    transform: scale(1.05);
+  }
+  
+  .instructor-card .badges {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .badge.bg-purple {
+    background-color: var(--purple) !important;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .kalari-gradient {
+    background-image: linear-gradient(to right, #dc3545, #a71d2a);
+  }
+  
+  .yoga-gradient {
+    background-image: linear-gradient(to right, #6f42c1, #4a2d82);
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .skill-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .skill-item i {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Testimonials */
+  .testimonial-item {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .rating {
+    color: gold;
+    font-size: 1.2rem;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #dc3545 0%, #6f42c1 100%);
+    color: white;
+  }
+  
+  /* Buttons */
+  .btn-purple {
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+  }
+  
+  .btn-purple:hover {
+    background-color: #5a36a8;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .floating-nav {
+      bottom: 20px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .instructor-hero {
+      min-height: 60vh;
+    }
+    
+    .display-4 {
+      font-size: 2.5rem;
+    }
+    
+    .floating-nav span {
+      display: none;
+    }
+    
+    .floating-nav {
+      gap: 25px;
+      padding: 10px 25px;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Floating nav active state
+  const sections = document.querySelectorAll('section');
+  const navItems = document.querySelectorAll('.floating-nav .nav-item');
+  
+  window.addEventListener('scroll', function() {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (pageYOffset >= (sectionTop - 300)) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('href') === `#${current}`) {
+        item.classList.add('active');
+      }
+    });
+  });
+  
+  // Smooth scrolling for floating nav
+  document.querySelectorAll('.floating-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+</script>
+{% endblock %}
